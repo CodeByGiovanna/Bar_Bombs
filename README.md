@@ -50,11 +50,6 @@ git clone https://github.com/seu-usuario/bombs-bar.git
 * Integração com backend
 * Versão mobile mais otimizada
 
-## 📞 Contato
-
-Email: [contato@bombsbar.com.br](mailto:contato@bombsbar.com.br)
-Instagram: @bombsbar
-
 ---
 
 Feito com 🍹 e criatividade
