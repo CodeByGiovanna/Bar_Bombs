@@ -36,13 +36,7 @@ O objetivo é criar uma experiência visual moderna e elegante, com foco em est�
 
 ## 🚀 Como usar
 
-1. Clone o repositório:
-
-```bash
-git clone https://github.com/seu-usuario/bombs-bar.git
-```
-
-2. Abra o arquivo `index.html` no navegador
+https://codebygiovanna.github.io/Bar_Bombs/
 
 ## 📌 Melhorias futuras
 
