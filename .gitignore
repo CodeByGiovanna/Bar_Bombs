@@ -25,3 +25,6 @@ build/
 
 # Logs
 *.log
+
+# Claude Code (configurações locais)
+.claude/
