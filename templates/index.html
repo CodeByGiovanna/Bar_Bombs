@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bombs Bar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- ===== INTRO OVERLAY ===== -->
+    <div id="intro-overlay" class="intro-overlay">
+      <div class="intro-content">
+        <p class="intro-kicker">THE</p>
+        <div class="intro-wordmark">
+          BOMBS<i class="fa-solid fa-martini-glass-citrus intro-icon"></i><span>BAR</span>
+        </div>
+        <p class="intro-tagline" data-i18n="intro.tagline">Tropical Cocktails &amp; Petiscos</p>
+      </div>
+      <div class="intro-vignette"></div>
+    </div>
+
+    <!-- ===== TOPBAR ===== -->
+    <div class="topbar">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="it">IT</button>
+      </div>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+      <button class="navbar-brand" data-tab="home">BOMBS<span>BAR</span></button>
+      <div class="navbar-links">
+        <button class="nav-tab-link" data-tab="about"    data-i18n="nav.about">Sobre</button>
+        <button class="nav-tab-link" data-tab="events"   data-i18n="nav.events">Eventos</button>
+        <button class="nav-tab-link" data-tab="menu"     data-i18n="nav.menu">Menu</button>
+        <button class="nav-tab-link" data-tab="petiscos" data-i18n="nav.snacks">Petiscos</button>
+        <button class="nav-tab-link" data-tab="contact"  data-i18n="nav.contact">Contato</button>
+      </div>
+      <div class="navbar-right">
+        <a href="{{ url_for('pedido') }}" class="cart-btn">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-label" data-i18n="nav.order">Pedido</span>
+          <span id="cart-badge" class="cart-badge {% if total_itens == 0 %}oculto{% endif %}">
+            {{ total_itens }}
+          </span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== MOBILE NAV ===== -->
+    <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+      <button class="mobile-nav-link" data-tab="about">
+        <i class="fa-solid fa-circle-info"></i> <span data-i18n="nav.about">Sobre</span>
+      </button>
+      <button class="mobile-nav-link" data-tab="events">
+        <i class="fa-solid fa-fire"></i> <span data-i18n="nav.events">Eventos</span>
+      </button>
+      <button class="mobile-nav-link" data-tab="menu">
+        <i class="fa-solid fa-martini-glass"></i> <span data-i18n="nav.menu">Menu</span>
+      </button>
+      <button class="mobile-nav-link" data-tab="petiscos">
+        <i class="fa-solid fa-utensils"></i> <span data-i18n="nav.snacks">Petiscos</span>
+      </button>
+      <button class="mobile-nav-link" data-tab="contact">
+        <i class="fa-solid fa-location-dot"></i> <span data-i18n="nav.contact">Contato</span>
+      </button>
+      <button class="mobile-nav-link" data-tab="booking">
+        <i class="fa-solid fa-calendar-check"></i> <span data-i18n="nav.booking">Booking</span>
+      </button>
+      <a href="{{ url_for('pedido') }}" class="mobile-nav-link">
+        <i class="fa-solid fa-bag-shopping"></i> <span data-i18n="nav.order">Pedido</span>
+      </a>
+    </div>
+
+    <!-- ===== TABS CONTAINER ===== -->
+    <div class="tabs-container">
+
+      <!-- TAB: HOME -->
+      <div id="tab-home" class="tab-page active">
+        <div class="hero">
+          <div class="sombra_circulo">
+            <div class="circulo">
+              <p class="kicker">THE</p>
+              <h1 class="wordmark">
+                BOMBS<i class="fa-solid fa-martini-glass-citrus"></i><span>BAR</span>
+              </h1>
+              <nav class="hero-menu" aria-label="Navegação principal">
+                <button class="hero-menu-btn" data-tab="about"    data-i18n="hero.about">About us</button>
+                <button class="hero-menu-btn" data-tab="events"   data-i18n="hero.events">Events</button>
+                <button class="hero-menu-btn" data-tab="contact"  data-i18n="hero.contact">Contact</button>
+                <button class="hero-menu-btn" data-tab="booking"  data-i18n="hero.booking">Booking</button>
+                <button class="hero-menu-btn" data-tab="menu"     data-i18n="hero.menu">Menu</button>
+                <button class="hero-menu-btn" data-tab="petiscos" data-i18n="hero.snacks">Petiscos</button>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: ABOUT -->
+      <div id="tab-about" class="tab-page">
+        <section class="page page-full">
+
+          <!-- Bloco 1: Hero textual -->
+          <div class="about-hero-text">
+            <h2 class="about-hero-titulo"><em>Onde cada gole conta uma história</em></h2>
+            <p class="about-hero-sub">Bem-vindo ao Bombs Bar — mixologia tropical, ingredientes frescos e uma vibe que não tem igual.</p>
+            <div class="about-golden-line"></div>
+          </div>
+
+          <!-- Bloco 2: Grid de identidade 2x2 -->
+          <div class="about-identity-grid">
+            <div class="about-id-card">
+              <div class="about-id-icon">🍹</div>
+              <h3>Nossa Missão</h3>
+              <p>Criar experiências sensoriais através da mixologia. Cada drink é uma composição pensada para surpreender.</p>
+            </div>
+            <div class="about-id-card">
+              <div class="about-id-icon">🌿</div>
+              <h3>Ingredientes</h3>
+              <p>Só o melhor: frutas frescas da época, ervas cultivadas, sucos naturais e gelos artesanais.</p>
+            </div>
+            <div class="about-id-card">
+              <div class="about-id-icon">🧪</div>
+              <h3>Receitas Autorais</h3>
+              <p>Nossos mixologistas desenvolvem criações únicas que você não vai encontrar em nenhum outro lugar.</p>
+            </div>
+            <div class="about-id-card">
+              <div class="about-id-icon">🎶</div>
+              <h3>Atmosfera</h3>
+              <p>Música, luz e décor pensados para transformar cada visita em uma noite memorável.</p>
+            </div>
+          </div>
+
+          <!-- Bloco 3: Estatísticas -->
+          <div class="about-stats">
+            <div class="about-stat">
+              <span class="about-stat-num">24+</span>
+              <span class="about-stat-label">drinks no menu</span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-num">15+</span>
+              <span class="about-stat-label">destilados premium</span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-num">5★</span>
+              <span class="about-stat-label">avaliação dos clientes</span>
+            </div>
+          </div>
+
+          <!-- Bloco 4: Quote -->
+          <blockquote class="about-quote-block">
+            <em>"Do Mojito ao Mango Tango — aqui, cada copo é preparado com intenção, criatividade e um toque de atrevimento."</em>
+          </blockquote>
+
+          <!-- Bloco 5: CTA -->
+          <div class="about-cta">
+            <p class="about-cta-text">Pronto para experimentar?</p>
+            <div class="about-cta-btns">
+              <button class="btn btn-outline about-cta-btn" data-tab="menu">VER O MENU</button>
+              <a href="{{ url_for('pedido') }}" class="btn btn-primary about-cta-btn">FAZER PEDIDO</a>
+            </div>
+          </div>
+
+        </section>
+      </div>
+
+      <!-- TAB: EVENTS -->
+      <div id="tab-events" class="tab-page">
+        <section class="page page-full alt">
+          <h2 class="section-title" data-i18n-html="events.title">Events <i class="fa-solid fa-fire"></i></h2>
+          <ul class="list">
+            <li>
+              <b data-i18n="event.1.title">Sunset Tropican</b><br />
+              <span class="event-2" data-i18n="event.1.desc">Final de tarde com coquetéis tropicais, frutas frescas e música lounge à beira da piscina ou rooftop.</span>
+            </li>
+            <li>
+              <b data-i18n-html="event.2.title">Caipirinha &amp; Samba Night</b><br />
+              <span class="event-2" data-i18n="event.2.desc">Noite com caipirinhas de sabores variados e apresentação ao vivo de samba ou bossa nova.</span>
+            </li>
+            <li>
+              <b data-i18n-html="event.3.title">Reggaeton &amp; Rum Party</b><br />
+              <span class="event-2" data-i18n="event.3.desc">Festa com ritmos caribenhos e drinks à base de rum, servidos em copos decorados.</span>
+            </li>
+            <li>
+              <b data-i18n="event.4.title">Havana Night</b><br />
+              <span class="event-2" data-i18n="event.4.desc">Noite temática cubana, com mojitos, daiquiris e trilha de salsa ao vivo.</span>
+            </li>
+            <li>
+              <b data-i18n="event.5.title">Exotic Fruits Experience</b><br />
+              <span class="event-2" data-i18n="event.5.desc">Degustação de coquetéis autorais feitos com frutas exóticas da estação.</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- TAB: MENU -->
+      <div id="tab-menu" class="tab-page">
+        <section class="page page-full alt">
+          <h2 class="section-title" data-i18n-html="menu.title">
+            Cocktails <i class="fa-solid fa-martini-glass"></i>
+          </h2>
+          <div class="drinks-grid">
+            {% for drink in drinks %}
+            <div class="drink-card">
+              <div class="drink-card__img-wrap">
+                {% if drink.imagem %}
+                <img
+                  class="drink-card__img"
+                  src="{{ url_for('static', filename=drink.imagem) }}"
+                  alt="{{ drink.nome }}"
+                  loading="lazy"
+                />
+                {% else %}
+                <div class="drink-card__placeholder">
+                  <i class="fa-solid fa-martini-glass-citrus"></i>
+                </div>
+                {% endif %}
+              </div>
+              <div class="drink-card__body">
+                <h3 class="drink-card__nome">{{ drink.nome }}</h3>
+                <p class="drink-card__desc">{{ drink.descricao_curta }}</p>
+                <p class="drink-card__preco">€ {{ "%.2f"|format(drink.preco) }}</p>
+                <div class="drink-card__actions">
+                  <a href="{{ url_for('detalhe_drink', slug=drink.slug) }}" class="btn btn-outline">
+                    <i class="fa-solid fa-circle-info"></i> <span data-i18n="btn.details">Detalhes</span>
+                  </a>
+                  <button class="btn btn-primary" onclick="adicionarAoCarrinho('{{ drink.nome }}')">
+                    <i class="fa-solid fa-plus"></i> <span data-i18n="btn.order">Pedido</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </section>
+      </div>
+
+      <!-- TAB: PETISCOS -->
+      <div id="tab-petiscos" class="tab-page">
+        <section class="page page-full">
+          <h2 class="section-title" data-i18n-html="snacks.title">
+            Petiscos <i class="fa-solid fa-utensils"></i>
+          </h2>
+          {% for categoria in petiscos %}
+          <div class="petisco-categoria">
+            <div class="petisco-cat-header">
+              <i class="fa-solid {{ categoria.icone }}" data-cor="{{ categoria.cor }}"></i>
+              <h3 class="petisco-cat-titulo">{{ categoria.categoria }}</h3>
+            </div>
+            <div class="petiscos-grid">
+              {% for item in categoria.itens %}
+              <div class="petisco-card">
+                <div class="petisco-card__img-wrap">
+                  {% if item.imagem %}
+                  <img
+                    class="petisco-card__img"
+                    src="{{ url_for('static', filename='images/petiscos/' + item.imagem) }}"
+                    alt="{{ item.nome }}"
+                    loading="lazy"
+                  />
+                  {% else %}
+                  <div class="petisco-card__placeholder-food">
+                    <i class="fa-solid fa-utensils"></i>
+                  </div>
+                  {% endif %}
+                </div>
+                <div class="petisco-card__body">
+                  <div class="petisco-card__top">
+                    <span class="petisco-card__nome">{{ item.nome }}</span>
+                    {% if item.vegano %}
+                    <span class="badge-vegano" title="Opção vegana"><i class="fa-solid fa-seedling"></i></span>
+                    {% endif %}
+                  </div>
+                  <p class="petisco-card__desc">{{ item.descricao }}</p>
+                  <div class="petisco-card__bottom">
+                    <span class="petisco-card__preco">€ {{ "%.2f"|format(item.preco) }}</span>
+                    <button class="btn btn-primary btn-sm" onclick="adicionarAoCarrinho('{{ item.nome }}')">
+                      <i class="fa-solid fa-plus"></i> <span data-i18n="btn.order">Pedido</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          {% endfor %}
+        </section>
+      </div>
+
+      <!-- TAB: CONTACT -->
+      <div id="tab-contact" class="tab-page">
+        <section class="page page-full alt">
+          <h2 class="section-title" data-i18n="contact.title">Contato</h2>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <p data-i18n-html="contact.address">Rua Exemplo, 123<br>Lisboa, Portugal</p>
+            </div>
+            <div class="contact-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <p><a href="https://wa.me/393513670592">+39 351 367 0592</a></p>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <p data-i18n-html="contact.hours">Seg–Qui: 18h–02h<br>Sex–Dom: 18h–04h</p>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <p><a href="mailto:contato@bombsbar.com">contato@bombsbar.com</a></p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://instagram.com/bombsbar" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/bombsbar" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.me/393513670592" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </section>
+      </div>
+
+      <!-- TAB: BOOKING -->
+      <div id="tab-booking" class="tab-page">
+        <section class="page page-full">
+          <h2 class="section-title" data-i18n="booking.title">Reserve Now</h2>
+          <p style="margin-top: 40px;">
+            <a class="button" href="mailto:contato@bombsbar.com">contato@bombsbar.com</a>
+          </p>
+        </section>
+      </div>
+
+    </div><!-- /tabs-container -->
+
+    <script src="{{ url_for('static', filename='js/i18n.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

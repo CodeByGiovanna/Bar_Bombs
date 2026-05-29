@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ drink.nome }} — Bombs Bar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  </head>
+  <body style="background:#001a09; min-height:100vh;">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="it">IT</button>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <a href="{{ url_for('home') }}" class="navbar-brand">BOMBS<span>BAR</span></a>
+      <div class="navbar-links">
+        <a href="{{ url_for('home') }}#menu"    data-i18n="nav.menu">Menu</a>
+        <a href="{{ url_for('home') }}#contact" data-i18n="nav.contact">Contato</a>
+      </div>
+      <div class="navbar-right">
+        <a href="{{ url_for('pedido') }}" class="cart-btn">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-label" data-i18n="nav.order">Pedido</span>
+          <span id="cart-badge" class="cart-badge {% if total_itens == 0 %}oculto{% endif %}">
+            {{ total_itens }}
+          </span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="detalhe-wrap">
+      <!-- Imagem -->
+      <div>
+        {% if drink.imagem %}
+        <img
+          class="detalhe-img"
+          src="{{ url_for('static', filename=drink.imagem) }}"
+          alt="{{ drink.nome }}"
+        />
+        {% else %}
+        <div class="detalhe-img drink-card__placeholder" style="height:360px; border-radius:20px;">
+          <i class="fa-solid fa-martini-glass-citrus" style="font-size:6rem;"></i>
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- Informações -->
+      <div class="detalhe-info">
+        <a href="{{ url_for('home') }}#menu" class="voltar-link">
+          <i class="fa-solid fa-arrow-left"></i> <span data-i18n="drink.back">Voltar ao menu</span>
+        </a>
+        <h1>{{ drink.nome }}</h1>
+        <p class="detalhe-preco">€ {{ "%.2f"|format(drink.preco) }}</p>
+
+        <p class="detalhe-descricao">{{ drink.descricao }}</p>
+
+        <p class="ingredientes-titulo" data-i18n="drink.ingredients">Ingredientes</p>
+        <ul class="ingredientes-lista">
+          {% for ingrediente in drink.ingredientes %}
+          <li>{{ ingrediente }}</li>
+          {% endfor %}
+        </ul>
+
+        <button
+          class="btn btn-primary"
+          style="font-size:1rem; padding:12px 28px;"
+          onclick="adicionarAoCarrinho('{{ drink.nome }}')"
+        >
+          <i class="fa-solid fa-plus"></i> <span data-i18n="drink.add">Adicionar ao pedido</span>
+        </button>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/i18n.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

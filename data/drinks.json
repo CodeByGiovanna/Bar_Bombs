@@ -1,0 +1,376 @@
+[
+  {
+    "nome": "Mojito",
+    "slug": "mojito",
+    "descricao_curta": "Refrescante coquetel cubano com hortelã, rum e limão.",
+    "descricao": "O Mojito é o coquetel cubano por excelência — uma combinação perfeita de rum branco, folhas de hortelã frescas, suco de limão e açúcar, completado com água com gás. Cada gole é uma explosão de frescor tropical que transporta você direto para as praias de Havana. Servido com gelo generoso e um ramo de hortelã fresca, é a escolha ideal para noites quentes.",
+    "ingredientes": [
+      "Rum branco",
+      "Suco de limão fresco",
+      "Açúcar de cana",
+      "Folhas de hortelã",
+      "Água com gás",
+      "Gelo"
+    ],
+    "preco": 9.5,
+    "imagem": "images/drinks/mojito.png"
+  },
+  {
+    "nome": "Negroni",
+    "slug": "negroni",
+    "descricao_curta": "Clássico italiano equilibrado entre gin, Campari e vermute.",
+    "descricao": "O Negroni é a elegância italiana em forma de coquetel. A combinação sofisticada de gin, Campari e vermute rosso cria um equilíbrio perfeito entre o amargo, o doce e o aromático. Servido com gelo e uma casca de laranja, é o aperitivo preferido dos apreciadores do bom gosto. Um clássico intemporal que nunca decepciona.",
+    "ingredientes": [
+      "Gin",
+      "Campari",
+      "Vermute rosso",
+      "Casca de laranja",
+      "Gelo"
+    ],
+    "preco": 11.0,
+    "imagem": "images/drinks/negroni.jpg"
+  },
+  {
+    "nome": "Gin Tonic",
+    "slug": "gin-tonic",
+    "descricao_curta": "Combinação clássica e refrescante de gin premium com tônica.",
+    "descricao": "O Gin Tonic é simplicidade elevada à perfeição. Gin premium encontra a efervescência da água tônica artesanal, criando uma bebida incrivelmente refrescante e aromática. Guarnecido com fatias de pepino, bagas de zimbro e ervas frescas, cada taça é uma experiência sensorial única. Ideal para quem aprecia sabores limpos e sofisticados.",
+    "ingredientes": [
+      "Gin premium",
+      "Água tônica artesanal",
+      "Pepino",
+      "Bagas de zimbro",
+      "Limão",
+      "Ervas aromáticas"
+    ],
+    "preco": 10.5,
+    "imagem": "images/drinks/gin_tonic.jpg"
+  },
+  {
+    "nome": "Aperol Spritz",
+    "slug": "aperol-spritz",
+    "descricao_curta": "O aperitivo italiano cítrico e levemente amargo com prosecco.",
+    "descricao": "O Aperol Spritz capturou o coração da Europa com sua cor laranja vibrante e sabor refrescante. A combinação harmoniosa de Aperol, prosecco italiano e água com gás resulta numa bebida leve, cítrica e levemente amarga que é perfeita para qualquer hora do dia. Guarnecido com fatias de laranja fresca, é puro sol italiano num copo.",
+    "ingredientes": [
+      "Aperol",
+      "Prosecco italiano",
+      "Água com gás",
+      "Laranja fresca",
+      "Gelo"
+    ],
+    "preco": 9.0,
+    "imagem": "images/drinks/aperol_spritz.avif"
+  },
+  {
+    "nome": "Moscow Mule",
+    "slug": "moscow-mule",
+    "descricao_curta": "Vodka premium com cerveja de gengibre picante e limão.",
+    "descricao": "O Moscow Mule é um coquetel americano de alma russa — vodka premium encontra a intensidade da cerveja de gengibre artesanal e o frescor do limão tahiti. Servido no icônico copo de cobre que mantém a bebida gelada por mais tempo, cada gole traz a combinação perfeita entre picância, acidez e refrescância. Impossível tomar só um.",
+    "ingredientes": [
+      "Vodka premium",
+      "Cerveja de gengibre (ginger beer)",
+      "Suco de limão tahiti",
+      "Gelo",
+      "Folhas de hortelã"
+    ],
+    "preco": 10.0,
+    "imagem": "images/drinks/moscow-mule.png"
+  },
+  {
+    "nome": "Margarita",
+    "slug": "margarita",
+    "descricao_curta": "O coquetel mexicano clássico com tequila, triple sec e limão.",
+    "descricao": "A Margarita é o coquetel mais famoso do México — uma festa de sabores em cada gole. Tequila premium reposado, triple sec aromático e suco de limão siciliano fresco se unem para criar uma bebida vibrante e cheia de personalidade. Servida com a borda salgada e gelo, é a escolha perfeita para quem busca intensidade e refrescância ao mesmo tempo.",
+    "ingredientes": [
+      "Tequila reposado",
+      "Triple sec",
+      "Suco de limão siciliano fresco",
+      "Sal grosso",
+      "Gelo"
+    ],
+    "preco": 10.5,
+    "imagem": "images/drinks/marguerita.jpg"
+  },
+  {
+    "nome": "Whisky Sour",
+    "slug": "whisky-sour",
+    "descricao_curta": "Whisky bourbon, suco de limão e um toque de claras batidas.",
+    "descricao": "O Whisky Sour é a prova de que a simplicidade é a maior sofisticação. Whisky bourbon de qualidade, suco de limão fresco e xarope simples se encontram com claras de ovo levemente batidas, criando uma textura aveludada e uma espuma sedosa que encanta à primeira vista. Um coquetel com profundidade, equilíbrio e personalidade inconfundíveis.",
+    "ingredientes": [
+      "Whisky bourbon",
+      "Suco de limão fresco",
+      "Xarope simples",
+      "Clara de ovo",
+      "Angostura bitters"
+    ],
+    "preco": 12.0,
+    "imagem": "images/drinks/wisky.avif"
+  },
+  {
+    "nome": "Sex on the Beach",
+    "slug": "sex-on-the-beach",
+    "descricao_curta": "Coquetel tropical frutado com vodka, pêssego e sucos cítricos.",
+    "descricao": "Sex on the Beach é o coquetel tropical que conquista pela cor vibrante e pelo sabor irresistível. A combinação de vodka, licor de pêssego, suco de laranja e suco de cranberry cria uma bebida frutada, doce e levemente ácida que evoca verões intermináveis à beira-mar. Servido com gelo e frutas frescas, é pura alegria num copo.",
+    "ingredientes": [
+      "Vodka",
+      "Licor de pêssego (Peach Schnapps)",
+      "Suco de laranja",
+      "Suco de cranberry",
+      "Laranja e cerejas para decorar"
+    ],
+    "preco": 9.5,
+    "imagem": "images/drinks/sex_one_beach.jpg"
+  },
+  {
+    "nome": "Caipirinha",
+    "slug": "caipirinha",
+    "descricao_curta": "O drink nacional brasileiro com cachaça, limão e açúcar.",
+    "descricao": "A Caipirinha é a alma do Brasil numa taça — cachaça artesanal de qualidade superior, limão tahiti fresco macerado com açúcar de cana e muito gelo. O resultado é um coquetel vibrante, cítrico e refrescante que conquistou o mundo. Simples na preparação, inesquecível no sabor. Cada gole conta uma história de sol, samba e alegria brasileira.",
+    "ingredientes": [
+      "Cachaça artesanal",
+      "Limão tahiti",
+      "Açúcar de cana",
+      "Gelo picado"
+    ],
+    "preco": 8.5,
+    "imagem": "images/drinks/caipirinha.jpg"
+  },
+  {
+    "nome": "Piña Colada",
+    "slug": "pina-colada",
+    "descricao_curta": "O clássico tropical com rum, leite de coco e abacaxi.",
+    "descricao": "A Piña Colada é o símbolo máximo do verão tropical. Rum branco suave, leite de coco cremoso e abacaxi fresco se fundem numa bebida aveludada, doce e incrivelmente aromática. Servida com gelo triturado e decorada com uma rodela de abacaxi e uma cereja, cada gole é uma viagem ao Caribe. O drink perfeito para quem busca puro prazer.",
+    "ingredientes": [
+      "Rum branco",
+      "Leite de coco",
+      "Suco de abacaxi fresco",
+      "Gelo triturado",
+      "Abacaxi e cereja para decorar"
+    ],
+    "preco": 10.5,
+    "imagem": "images/drinks/pina_colada.avif"
+  },
+  {
+    "nome": "Mango Tango",
+    "slug": "mango-tango",
+    "descricao_curta": "Rum branco, manga fresca, limão e xarope de gengibre.",
+    "descricao": "O Mango Tango é o nosso convite para dançar com os sabores tropicais. Rum branco leve, manga madura fresca e suco de limão se unem ao xarope de gengibre artesanal, criando uma bebida vibrante e cheia de personalidade. O gengibre dá o toque picante que transforma cada gole numa experiência inesperada e absolutamente viciante.",
+    "ingredientes": [
+      "Rum branco",
+      "Manga fresca",
+      "Suco de limão",
+      "Xarope de gengibre",
+      "Gelo",
+      "Folhas de hortelã"
+    ],
+    "preco": 11.0,
+    "imagem": "images/drinks/mango_tango.webp"
+  },
+  {
+    "nome": "Passion Fruit Daiquiri",
+    "slug": "passion-fruit-daiquiri",
+    "descricao_curta": "Rum, maracujá e limão — leve, ácido e irresistível.",
+    "descricao": "O Passion Fruit Daiquiri captura a essência do maracujá brasileiro em forma de coquetel. Rum branco fresco, polpa de maracujá natural e suco de limão se equilibram com perfeição, criando uma bebida leve, ácida e incrivelmente aromática. Servido no clássico copo de coquetel com sementes de maracujá decorando, é elegância tropical no ponto certo.",
+    "ingredientes": [
+      "Rum branco",
+      "Polpa de maracujá fresco",
+      "Suco de limão",
+      "Xarope de açúcar",
+      "Gelo"
+    ],
+    "preco": 11.0,
+    "imagem": "images/drinks/passion_fruit_daiquiri.jpg"
+  },
+  {
+    "nome": "Watermelon Cooler",
+    "slug": "watermelon-cooler",
+    "descricao_curta": "Vodka, melancia fresca e hortelã — puro frescor de verão.",
+    "descricao": "O Watermelon Cooler é a refrescância de uma fatia de melancia transformada em coquetel. Vodka cristalina se mistura à polpa de melancia fresca batida e folhas de hortelã, criando uma bebida leve, hidratante e deliciosamente frutal. Com cor rosa vibrante e aroma inconfundível, é o drink perfeito para os dias mais quentes do verão.",
+    "ingredientes": [
+      "Vodka",
+      "Melancia fresca batida",
+      "Folhas de hortelã",
+      "Suco de limão",
+      "Gelo",
+      "Água com gás"
+    ],
+    "preco": 10.0,
+    "imagem": "images/drinks/watermelon_cooler.jpg"
+  },
+  {
+    "nome": "Strawberry Basil Smash",
+    "slug": "strawberry-basil-smash",
+    "descricao_curta": "Gin, morangos frescos e manjericão numa combinação surpreendente.",
+    "descricao": "O Strawberry Basil Smash desafia o que você conhece sobre drinks. Gin aromático encontra morangos maduros macerados e folhas de manjericão fresco, criando uma combinação inesperada e absolutamente sedutora. O doce das frutas, o herbáceo do manjericão e a botânica do gin se equilibram num coquetel sofisticado que surpreende a cada gole.",
+    "ingredientes": [
+      "Gin aromático",
+      "Morangos frescos",
+      "Folhas de manjericão",
+      "Suco de limão",
+      "Xarope de açúcar",
+      "Gelo"
+    ],
+    "preco": 11.5,
+    "imagem": "images/drinks/strawberry_basil_smash.jpg"
+  },
+  {
+    "nome": "Mai Tai",
+    "slug": "mai-tai",
+    "descricao_curta": "Rum envelhecido, licor de amêndoa, laranja e lima — um ícone.",
+    "descricao": "O Mai Tai é um clássico polinesiano que virou ícone da cultura tiki. Rum envelhecido de qualidade, licor de amêndoa orgeat e curacao de laranja se encontram com suco de lima fresco e um float de rum escuro por cima. Servido com guarda-chuva de papel e flores tropicais, é um coquetel com história, alma e sabor inigualável.",
+    "ingredientes": [
+      "Rum envelhecido",
+      "Licor de amêndoa (Orgeat)",
+      "Curaçau de laranja",
+      "Suco de lima",
+      "Rum escuro (float)",
+      "Cereja e flores tropicais"
+    ],
+    "preco": 13.0,
+    "imagem": "images/drinks/mai_tai.jpg"
+  },
+  {
+    "nome": "Zombie",
+    "slug": "zombie",
+    "descricao_curta": "Blend de três rums com sucos tropicais e especiarias — poderoso.",
+    "descricao": "O Zombie é o coquetel mais lendário da cultura tiki — e com razão. A combinação explosiva de três tipos de rum com sucos tropicais, especiarias exóticas e um toque de absinto cria uma bebida de sabor profundo, complexo e inesquecível. Tão potente que alguns bares limitam a dois por pessoa. Beba devagar e aprecie cada camada de sabor.",
+    "ingredientes": [
+      "Rum branco",
+      "Rum dourado",
+      "Rum escuro",
+      "Suco de abacaxi",
+      "Suco de laranja",
+      "Granadine",
+      "Absinto (dash)",
+      "Especiarias"
+    ],
+    "preco": 14.0,
+    "imagem": "images/drinks/zombie.jpg"
+  },
+  {
+    "nome": "Dark & Stormy",
+    "slug": "dark-stormy",
+    "descricao_curta": "Rum escuro encorpado com ginger beer e limão — simples e perfeito.",
+    "descricao": "O Dark & Stormy é a tempestade perfeita num copo — rum escuro de Bermuda ou Jamaica flutuando sobre ginger beer picante e suco de limão fresco. A combinação do melaço encorpado do rum com a intensidade do gengibre e a acidez do limão cria um drink audacioso e profundamente satisfatório. Clássico marinheiro que atravessou o tempo com estilo.",
+    "ingredientes": [
+      "Rum escuro",
+      "Ginger beer artesanal",
+      "Suco de limão fresco",
+      "Gelo",
+      "Limão para decorar"
+    ],
+    "preco": 10.5,
+    "imagem": "images/drinks/dark_stormy.webp"
+  },
+  {
+    "nome": "Coco Loco",
+    "slug": "coco-loco",
+    "descricao_curta": "Cachaça brasileira, leite de coco, abacaxi e limão — tropical puro.",
+    "descricao": "O Coco Loco é a fusão perfeita entre o Brasil e o Caribe. Cachaça artesanal encontra leite de coco cremoso, suco de abacaxi fresco e um toque de limão, criando uma bebida tropical que aquece a alma e refresca o corpo ao mesmo tempo. Com a rusticidade da cachaça e a suavidade do coco, é uma celebração dos sabores tropicais brasileiros.",
+    "ingredientes": [
+      "Cachaça artesanal",
+      "Leite de coco",
+      "Suco de abacaxi fresco",
+      "Suco de limão",
+      "Gelo",
+      "Coco ralado para decorar"
+    ],
+    "preco": 11.0,
+    "imagem": "images/drinks/coco_loco.jpg"
+  },
+  {
+    "nome": "Brazilian Sunset",
+    "slug": "brazilian-sunset",
+    "descricao_curta": "Cachaça, goiaba, granadine e espumante — o pôr do sol em taça.",
+    "descricao": "O Brazilian Sunset captura a beleza dos pôr do sol tropicais brasileiros num único copo. Cachaça suave, suco de goiaba fresca e granadine criam degradês visuais de cores quentes que impressionam antes mesmo do primeiro gole. Finalizado com espumante borbulhante, é um drink festivo, elegante e profundamente brasileiro. Perfeito para celebrar.",
+    "ingredientes": [
+      "Cachaça",
+      "Suco de goiaba fresco",
+      "Granadine",
+      "Espumante brut",
+      "Gelo",
+      "Frutas para decorar"
+    ],
+    "preco": 13.0,
+    "imagem": "images/drinks/brazilian_sunset.webp"
+  },
+  {
+    "nome": "Lychee Martini",
+    "slug": "lychee-martini",
+    "descricao_curta": "Vodka, licor de lichia e água de rosas — delicado e exótico.",
+    "descricao": "O Lychee Martini é a sofisticação asiática em estado puro. Vodka premium encontra licor de lichia aromático e água de rosas floral, criando uma bebida delicada, perfumada e surpreendentemente complexa. Servido no clássico copo de martini com uma lichia fresca mergulhada no fundo, é visualmente deslumbrante e de sabor inesquecível.",
+    "ingredientes": [
+      "Vodka premium",
+      "Licor de lichia",
+      "Água de rosas",
+      "Suco de limão (dash)",
+      "Licor de lichia e rosa para decorar"
+    ],
+    "preco": 12.0,
+    "imagem": "images/drinks/lychee_martini.jpg"
+  },
+  {
+    "nome": "Thai Basil Smash",
+    "slug": "thai-basil-smash",
+    "descricao_curta": "Gin, manjericão tailandês, limão e xarope de capim-limão.",
+    "descricao": "O Thai Basil Smash é uma viagem sensorial ao sudeste asiático. Gin botânico premium, folhas de manjericão tailandês maceradas e xarope de capim-limão artesanal criam uma bebida herbácea, cítrica e incrivelmente aromática. Com a frescura intensa do limão tahiti e a complexidade do manjericão tailandês, é um drink que expande horizontes.",
+    "ingredientes": [
+      "Gin botânico",
+      "Manjericão tailandês fresco",
+      "Xarope de capim-limão",
+      "Suco de limão tahiti",
+      "Gelo",
+      "Rodela de limão"
+    ],
+    "preco": 12.5,
+    "imagem": "images/drinks/thai_basil_smash.avif"
+  },
+  {
+    "nome": "Blue Lagoon Tropical",
+    "slug": "blue-lagoon-tropical",
+    "descricao_curta": "Vodka, curaçau azul, abacaxi e água de coco — vibrante e visual.",
+    "descricao": "O Blue Lagoon Tropical é o drink mais bonito do menu — sua cor azul turquesa deslumbrante para a vista antes mesmo do primeiro gole. Vodka cristalina, curaçau azul, suco de abacaxi e água de coco criam uma combinação leve, frutal e refrescante que combina perfeitamente com noites tropicais. A beleza e o sabor em harmonia perfeita.",
+    "ingredientes": [
+      "Vodka",
+      "Curaçau azul",
+      "Suco de abacaxi",
+      "Água de coco",
+      "Gelo",
+      "Limão e cereja azul para decorar"
+    ],
+    "preco": 11.0,
+    "imagem": "images/drinks/blue_lagoon_tropical.jpg"
+  },
+  {
+    "nome": "Tamarind Sour",
+    "slug": "tamarind-sour",
+    "descricao_curta": "Tequila, pasta de tamarindo, mel e limão — ácido e profundo.",
+    "descricao": "O Tamarind Sour é para os aventureiros do sabor. Tequila reposado encontra a acidez profunda e complexa da pasta de tamarindo artesanal, equilibrada pelo mel floral e limão fresco. O resultado é um coquetel com personalidade marcante — ao mesmo tempo ácido, doce, levemente amargo e tremendamente sofisticado. Uma experiência única e inesquecível.",
+    "ingredientes": [
+      "Tequila reposado",
+      "Pasta de tamarindo",
+      "Mel floral",
+      "Suco de limão fresco",
+      "Sal defumado na borda",
+      "Gelo"
+    ],
+    "preco": 12.0,
+    "imagem": "images/drinks/tamarind_sour.jpg"
+  },
+  {
+    "nome": "Hibiscus Fizz",
+    "slug": "hibiscus-fizz",
+    "descricao_curta": "Gin, xarope de hibisco, água com gás e laranja — floral e festivo.",
+    "descricao": "O Hibiscus Fizz é elegância floral em cada bolha. Gin aromático se mistura ao xarope de hibisco artesanal — de cor rubi intenso e sabor floral com toque ácido — completado com água com gás e suco de laranja fresco. É um drink visualmente espetacular, festivo e com sabor complexo que equilibra o floral, o ácido e o efervescente.",
+    "ingredientes": [
+      "Gin",
+      "Xarope de hibisco artesanal",
+      "Água com gás",
+      "Suco de laranja fresco",
+      "Gelo",
+      "Flor de hibisco seca para decorar"
+    ],
+    "preco": 11.5,
+    "imagem": "images/drinks/hibiscus_fizz.jpg"
+  }
+]

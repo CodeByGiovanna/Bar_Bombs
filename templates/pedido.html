@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Pedido — Bombs Bar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  </head>
+  <body style="background:#001a09; min-height:100vh;">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="it">IT</button>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <a href="{{ url_for('home') }}" class="navbar-brand">BOMBS<span>BAR</span></a>
+      <div class="navbar-right">
+        <a href="{{ url_for('home') }}" class="btn btn-outline" style="font-size:0.82rem; padding:7px 16px; border-radius:999px;">
+          <i class="fa-solid fa-arrow-left"></i> <span data-i18n="drink.back">Voltar ao menu</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="pedido-wrap">
+      <h1>
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span data-i18n="order.title">Meu Pedido</span>
+      </h1>
+
+      <!-- Carrinho vazio -->
+      <div id="pedido-vazio" class="pedido-vazio" {% if itens %}style="display:none"{% endif %}>
+        <i class="fa-solid fa-wine-glass-empty" style="font-size:3rem; color:#444; display:block; margin-bottom:16px;"></i>
+        <p data-i18n="order.empty">Seu pedido está vazio.</p>
+        <a href="{{ url_for('home') }}#menu" class="btn btn-primary" style="margin-top:16px;">
+          <i class="fa-solid fa-arrow-left"></i> <span data-i18n="order.see_menu">Ver o menu</span>
+        </a>
+      </div>
+
+      <!-- Lista de itens -->
+      <div id="pedido-conteudo" {% if not itens %}style="display:none"{% endif %}>
+
+        {% for item in itens %}
+        <div class="pedido-item" data-nome="{{ item.nome }}" data-preco="{{ item.preco }}">
+          {% if item.imagem %}
+          <img
+            class="pedido-item__img"
+            src="{{ url_for('static', filename=item.imagem) }}"
+            alt="{{ item.nome }}"
+          />
+          {% else %}
+          <div class="pedido-item__img" style="background:linear-gradient(135deg,#0a2410,#1a4a22); display:flex; align-items:center; justify-content:center; color:rgba(60,195,60,0.4); font-size:1.6rem;">
+            <i class="fa-solid fa-martini-glass-citrus"></i>
+          </div>
+          {% endif %}
+          <div class="pedido-item__info">
+            <div class="pedido-item__nome">{{ item.nome }}</div>
+            <div class="pedido-item__preco-unit">€ {{ "%.2f"|format(item.preco) }} <span data-i18n="order.unit">/ unid.</span></div>
+          </div>
+          <div class="pedido-item__controles">
+            <button class="qty-btn qty-btn-menos" title="Diminuir">−</button>
+            <span class="qty-display">{{ item.quantidade }}</span>
+            <button class="qty-btn qty-btn-mais" title="Aumentar">+</button>
+          </div>
+          <div class="pedido-item__subtotal">€ {{ "%.2f"|format(item.subtotal) }}</div>
+          <button class="pedido-item__remover" title="Remover item">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+        {% endfor %}
+
+        <!-- Total -->
+        <div class="pedido-total">
+          <span class="pedido-total__label" data-i18n="order.total">Total</span>
+          <span class="pedido-total__valor" id="total-valor">€ {{ "%.2f"|format(total) }}</span>
+        </div>
+
+        <!-- Ações -->
+        <div class="pedido-acoes">
+          <a href="https://glovoapp.com" target="_blank" class="btn btn-glovo">
+            <i class="fa-solid fa-motorcycle"></i> <span data-i18n="order.glovo">Finalizar via Glovo</span>
+          </a>
+          <a href="{{ url_for('home') }}#menu" class="btn btn-outline">
+            <i class="fa-solid fa-plus"></i> <span data-i18n="order.add_more">Adicionar mais</span>
+          </a>
+          <button id="btn-limpar" class="btn btn-limpar">
+            <i class="fa-solid fa-trash"></i> <span data-i18n="order.clear">Limpar pedido</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/i18n.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

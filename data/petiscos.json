@@ -1,0 +1,48 @@
+[
+  {
+    "categoria": "Frios & Frescos",
+    "icone": "fa-cheese",
+    "cor": "#c9a44a",
+    "itens": [
+      { "nome": "Tábua de Frios",       "descricao": "Queijos selecionados, presuntos artesanais, frutas secas e geleias da casa.",                                                          "preco": 18.00, "vegano": false, "imagem": null },
+      { "nome": "Bruschetta Clássica",   "descricao": "Pão artesanal tostado com tomate fresco, manjericão e azeite extra virgem.",                                                          "preco":  9.00, "vegano": true,  "imagem": null },
+      { "nome": "Carpaccio de Carne",    "descricao": "Finas lâminas de contrafilé com rúcula, parmesão em lascas e alcaparras.",                                                           "preco": 14.00, "vegano": false, "imagem": null },
+      { "nome": "Carpaccio de Abobrinha","descricao": "Abobrinha fatiada finamente com limão, hortelã, azeite e pinhões torrados.",                                                         "preco": 12.00, "vegano": true,  "imagem": null },
+      { "nome": "Ceviche do Bar",        "descricao": "Peixe fresco marinado em leite de tigre, pimenta dedo-de-moça, coentro e milho tostado. Casa perfeitamente com Margarita.",         "preco": 15.00, "vegano": false, "imagem": null }
+    ]
+  },
+  {
+    "categoria": "Leves & Práticos",
+    "icone": "fa-leaf",
+    "cor": "#5fa585",
+    "itens": [
+      { "nome": "Mini Wraps de Frango", "descricao": "Frango grelhado, rúcula fresca e cream cheese em wrap de espinafre.",                                                                  "preco": 11.00, "vegano": false, "imagem": null },
+      { "nome": "Salada Gourmet",       "descricao": "Mix de folhas com nozes tostadas, peras fatiadas, gorgonzola e vinagrete balsâmico.",                                                  "preco": 12.00, "vegano": false, "imagem": null },
+      { "nome": "Bowl de Hummus",       "descricao": "Hummus artesanal com azeite, páprica defumada, pão pita e legumes frescos da estação.",                                               "preco": 10.00, "vegano": true,  "imagem": null },
+      { "nome": "Tartare de Atum",      "descricao": "Atum fresco temperado com gengibre, shoyu, gergelim e abacate cremoso.",                                                              "preco": 16.00, "vegano": false, "imagem": null },
+      { "nome": "Tartare de Tomate",    "descricao": "Tomates cravejados com alcaparras, cebola roxa, manjericão e mostarda dijon.",                                                        "preco": 11.00, "vegano": true,  "imagem": null }
+    ]
+  },
+  {
+    "categoria": "Finger Food",
+    "icone": "fa-hand-sparkles",
+    "cor": "#b85c3a",
+    "itens": [
+      { "nome": "Croquetes da Casa",   "descricao": "Trio de croquetes — queijo brie, bacalhau com batata e cogumelos com ervas.",                                                           "preco": 13.00, "vegano": false, "imagem": null },
+      { "nome": "Caprese Espetinho",   "descricao": "Mozzarella de búfala, tomate cereja e manjericão fresco com azeite aromatizado.",                                                      "preco": 10.00, "vegano": false, "imagem": null },
+      { "nome": "Gyoza Crocante",      "descricao": "Gyoza frito com recheio de frango e legumes, servido com molho ponzu e gengibre.",                                                    "preco": 12.00, "vegano": false, "imagem": null },
+      { "nome": "Camarão ao Alho",     "descricao": "Camarões salteados no azeite com alho, pimenta rosa e limão siciliano, acompanhados de pão rústico.",                                 "preco": 17.00, "vegano": false, "imagem": null }
+    ]
+  },
+  {
+    "categoria": "Para Finalizar",
+    "icone": "fa-ice-cream",
+    "cor": "#9b59b6",
+    "itens": [
+      { "nome": "Tiramisù",                      "descricao": "Clássico italiano em copinho individual com mascarpone, café expresso e cacau.",                                              "preco":  8.00, "vegano": false, "imagem": null },
+      { "nome": "Mousse de Maracujá",            "descricao": "Mousse aerado com calda de maracujá fresco e raspas de limão siciliano.",                                                    "preco":  7.50, "vegano": false, "imagem": null },
+      { "nome": "Mousse de Chocolate",           "descricao": "Chocolate amargo 70% com chantilly levemente adoçado e raspas de laranja.",                                                  "preco":  7.50, "vegano": false, "imagem": null },
+      { "nome": "Cheesecake de Frutas Vermelhas","descricao": "Base de biscoito amanteigado, creme de baunilha e calda de frutas vermelhas frescas.",                                      "preco":  8.50, "vegano": false, "imagem": null }
+    ]
+  }
+]
