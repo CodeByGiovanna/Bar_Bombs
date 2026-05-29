@@ -20,6 +20,7 @@ O objetivo é criar uma experiência visual moderna e elegante, com foco em est�
 * CSS3
 * Google Fonts
 * Font Awesome
+* Python
 
 ## 🎨 Funcionalidades
 
@@ -49,11 +50,6 @@ git clone https://github.com/seu-usuario/bombs-bar.git
 * Sistema de reservas real
 * Integração com backend
 * Versão mobile mais otimizada
-
-## 📞 Contato
-
-Email: [contato@bombsbar.com.br](mailto:contato@bombsbar.com.br)
-Instagram: @bombsbar
 
 ---
 
