@@ -20,6 +20,7 @@ O objetivo é criar uma experiência visual moderna e elegante, com foco em est�
 * CSS3
 * Google Fonts
 * Font Awesome
+* Python
 
 ## 🎨 Funcionalidades
 
