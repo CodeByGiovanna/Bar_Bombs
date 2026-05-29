@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bombs Bar</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- ===== INTRO OVERLAY ===== -->
+    <div id="intro-overlay" class="intro-overlay">
+      <div class="intro-content">
+        <p class="intro-kicker">THE</p>
+        <div class="intro-wordmark">
+          BOMBS<i class="fa-solid fa-martini-glass-citrus intro-icon"></i><span>BAR</span>
+        </div>
+        <p class="intro-tagline" data-i18n="intro.tagline">Tropical Cocktails &amp; Petiscos</p>
+      </div>
+      <div class="intro-vignette"></div>
+    </div>
+
+    <!-- ===== TOPBAR ===== -->
+    <div class="topbar">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="it">IT</button>
+      </div>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+      <button class="navbar-brand" data-tab="home">BOMBS<span>BAR</span></button>
+      <div class="navbar-links">
+        <button class="nav-tab-link" data-tab="about"    data-i18n="nav.about">Sobre</button>
+        <button class="nav-tab-link" data-tab="events"   data-i18n="nav.events">Eventos</button>
+        <button class="nav-tab-link" data-tab="menu"     data-i18n="nav.menu">Menu</button>
+        <button class="nav-tab-link" data-tab="petiscos" data-i18n="nav.snacks">Petiscos</button>
+        <button class="nav-tab-link" data-tab="contact"  data-i18n="nav.contact">Contato</button>
+      </div>
+      <div class="navbar-right">
+        <button class="cart-btn" data-tab="pedido">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-label" data-i18n="nav.order">Pedido</span>
+          <span id="cart-badge" class="cart-badge oculto">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== MOBILE NAV ===== -->
+    <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+      <button class="mobile-nav-link" data-tab="about">
+        <i class="fa-solid fa-circle-info"></i> <span data-i18n="nav.about">Sobre</span>
+      </button>
+      <button class="mobile-nav-link" data-tab="events">
+        <i class="fa-solid fa-fire"></i> <span data-i18n="nav.events">Eventos</span>
+      </button>
+      <button class="mobile-nav-link" data-tab="menu">
+        <i class="fa-solid fa-martini-glass"></i> <span data-i18n="nav.menu">Menu</span>
+      </button>
+      <button class="mobile-nav-link" data-tab="petiscos">
+        <i class="fa-solid fa-utensils"></i> <span data-i18n="nav.snacks">Petiscos</span>
+      </button>
+      <button class="mobile-nav-link" data-tab="contact">
+        <i class="fa-solid fa-location-dot"></i> <span data-i18n="nav.contact">Contato</span>
+      </button>
+      <button class="mobile-nav-link" data-tab="booking">
+        <i class="fa-solid fa-calendar-check"></i> <span data-i18n="nav.booking">Booking</span>
+      </button>
+      <button class="mobile-nav-link" data-tab="pedido">
+        <i class="fa-solid fa-bag-shopping"></i> <span data-i18n="nav.order">Pedido</span>
+      </button>
+    </div>
+
+    <!-- ===== TABS CONTAINER ===== -->
+    <div class="tabs-container">
+
+      <!-- TAB: HOME -->
+      <div id="tab-home" class="tab-page active">
+        <div class="hero">
+          <div class="sombra_circulo">
+            <div class="circulo">
+              <p class="kicker">THE</p>
+              <h1 class="wordmark">
+                BOMBS<i class="fa-solid fa-martini-glass-citrus"></i><span>BAR</span>
+              </h1>
+              <nav class="hero-menu" aria-label="Navegação principal">
+                <button class="hero-menu-btn" data-tab="about"    data-i18n="hero.about">About us</button>
+                <button class="hero-menu-btn" data-tab="events"   data-i18n="hero.events">Events</button>
+                <button class="hero-menu-btn" data-tab="contact"  data-i18n="hero.contact">Contact</button>
+                <button class="hero-menu-btn" data-tab="booking"  data-i18n="hero.booking">Booking</button>
+                <button class="hero-menu-btn" data-tab="menu"     data-i18n="hero.menu">Menu</button>
+                <button class="hero-menu-btn" data-tab="petiscos" data-i18n="hero.snacks">Petiscos</button>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB: ABOUT -->
+      <div id="tab-about" class="tab-page">
+        <section class="page page-full">
+          <div class="about-hero-text">
+            <h2 class="about-hero-titulo"><em>Onde cada gole conta uma história</em></h2>
+            <p class="about-hero-sub">Bem-vindo ao Bombs Bar — mixologia tropical, ingredientes frescos e uma vibe que não tem igual.</p>
+            <div class="about-golden-line"></div>
+          </div>
+          <div class="about-identity-grid">
+            <div class="about-id-card">
+              <div class="about-id-icon">🍹</div>
+              <h3>Nossa Missão</h3>
+              <p>Criar experiências sensoriais através da mixologia. Cada drink é uma composição pensada para surpreender.</p>
+            </div>
+            <div class="about-id-card">
+              <div class="about-id-icon">🌿</div>
+              <h3>Ingredientes</h3>
+              <p>Só o melhor: frutas frescas da época, ervas cultivadas, sucos naturais e gelos artesanais.</p>
+            </div>
+            <div class="about-id-card">
+              <div class="about-id-icon">🧪</div>
+              <h3>Receitas Autorais</h3>
+              <p>Nossos mixologistas desenvolvem criações únicas que você não vai encontrar em nenhum outro lugar.</p>
+            </div>
+            <div class="about-id-card">
+              <div class="about-id-icon">🎶</div>
+              <h3>Atmosfera</h3>
+              <p>Música, luz e décor pensados para transformar cada visita em uma noite memorável.</p>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="about-stat">
+              <span class="about-stat-num">24+</span>
+              <span class="about-stat-label">drinks no menu</span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-num">15+</span>
+              <span class="about-stat-label">destilados premium</span>
+            </div>
+            <div class="about-stat">
+              <span class="about-stat-num">5★</span>
+              <span class="about-stat-label">avaliação dos clientes</span>
+            </div>
+          </div>
+          <blockquote class="about-quote-block">
+            <em>"Do Mojito ao Mango Tango — aqui, cada copo é preparado com intenção, criatividade e um toque de atrevimento."</em>
+          </blockquote>
+          <div class="about-cta">
+            <p class="about-cta-text">Pronto para experimentar?</p>
+            <div class="about-cta-btns">
+              <button class="btn btn-outline about-cta-btn" data-tab="menu">VER O MENU</button>
+              <button class="btn btn-primary about-cta-btn" data-tab="pedido">FAZER PEDIDO</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- TAB: EVENTS -->
+      <div id="tab-events" class="tab-page">
+        <section class="page page-full alt">
+          <h2 class="section-title" data-i18n-html="events.title">Events <i class="fa-solid fa-fire"></i></h2>
+          <ul class="list">
+            <li><b data-i18n="event.1.title">Sunset Tropican</b><br /><span class="event-2" data-i18n="event.1.desc">Final de tarde com coquetéis tropicais, frutas frescas e música lounge à beira da piscina ou rooftop.</span></li>
+            <li><b data-i18n-html="event.2.title">Caipirinha &amp; Samba Night</b><br /><span class="event-2" data-i18n="event.2.desc">Noite com caipirinhas de sabores variados e apresentação ao vivo de samba ou bossa nova.</span></li>
+            <li><b data-i18n-html="event.3.title">Reggaeton &amp; Rum Party</b><br /><span class="event-2" data-i18n="event.3.desc">Festa com ritmos caribenhos e drinks à base de rum, servidos em copos decorados.</span></li>
+            <li><b data-i18n="event.4.title">Havana Night</b><br /><span class="event-2" data-i18n="event.4.desc">Noite temática cubana, com mojitos, daiquiris e trilha de salsa ao vivo.</span></li>
+            <li><b data-i18n="event.5.title">Exotic Fruits Experience</b><br /><span class="event-2" data-i18n="event.5.desc">Degustação de coquetéis autorais feitos com frutas exóticas da estação.</span></li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- TAB: MENU -->
+      <div id="tab-menu" class="tab-page">
+        <section class="page page-full alt">
+          <h2 class="section-title" data-i18n-html="menu.title">Cocktails <i class="fa-solid fa-martini-glass"></i></h2>
+          <div class="drinks-grid" id="drinks-grid"></div>
+        </section>
+      </div>
+
+      <!-- TAB: PETISCOS -->
+      <div id="tab-petiscos" class="tab-page">
+        <section class="page page-full">
+          <h2 class="section-title" data-i18n-html="snacks.title">Petiscos <i class="fa-solid fa-utensils"></i></h2>
+          <div id="petiscos-container"></div>
+        </section>
+      </div>
+
+      <!-- TAB: CONTACT -->
+      <div id="tab-contact" class="tab-page">
+        <section class="page page-full alt">
+          <h2 class="section-title" data-i18n="contact.title">Contato</h2>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <p data-i18n-html="contact.address">Rua Exemplo, 123<br>Lisboa, Portugal</p>
+            </div>
+            <div class="contact-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <p><a href="https://wa.me/393513670592">+39 351 367 0592</a></p>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <p data-i18n-html="contact.hours">Seg–Qui: 18h–02h<br>Sex–Dom: 18h–04h</p>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <p><a href="mailto:contato@bombsbar.com">contato@bombsbar.com</a></p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://instagram.com/bombsbar" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com/bombsbar" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.me/393513670592" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </section>
+      </div>
+
+      <!-- TAB: BOOKING -->
+      <div id="tab-booking" class="tab-page">
+        <section class="page page-full">
+          <h2 class="section-title" data-i18n="booking.title">Reserve Now</h2>
+          <p style="margin-top: 40px;">
+            <a class="button" href="mailto:contato@bombsbar.com">contato@bombsbar.com</a>
+          </p>
+        </section>
+      </div>
+
+      <!-- TAB: PEDIDO (carrinho localStorage) -->
+      <div id="tab-pedido" class="tab-page">
+        <section class="page page-full alt">
+          <div class="pedido-wrap" style="padding-top: 20px;">
+            <h1 style="font-family:'DM Serif Display',serif; font-size:1.9rem; text-align:center; margin-bottom:40px; color:#ddd;">
+              <i class="fa-solid fa-bag-shopping"></i> <span data-i18n="order.title">Meu Pedido</span>
+            </h1>
+            <div id="pedido-vazio" class="pedido-vazio" style="display:none;">
+              <i class="fa-solid fa-wine-glass-empty" style="font-size:3rem; color:#444; display:block; margin-bottom:16px;"></i>
+              <p data-i18n="order.empty">Seu pedido está vazio.</p>
+              <button class="btn btn-primary" data-tab="menu" style="margin-top:16px;">
+                <i class="fa-solid fa-arrow-left"></i> <span data-i18n="order.see_menu">Ver o menu</span>
+              </button>
+            </div>
+            <div id="pedido-conteudo" style="display:none;">
+              <div id="pedido-lista"></div>
+              <div class="pedido-total">
+                <span class="pedido-total__label" data-i18n="order.total">Total</span>
+                <span class="pedido-total__valor" id="total-valor">€ 0.00</span>
+              </div>
+              <div class="pedido-acoes">
+                <a href="https://glovoapp.com" target="_blank" class="btn btn-glovo">
+                  <i class="fa-solid fa-motorcycle"></i> <span data-i18n="order.glovo">Finalizar via Glovo</span>
+                </a>
+                <button class="btn btn-outline" data-tab="menu">
+                  <i class="fa-solid fa-plus"></i> <span data-i18n="order.add_more">Adicionar mais</span>
+                </button>
+                <button id="btn-limpar" class="btn btn-limpar">
+                  <i class="fa-solid fa-trash"></i> <span data-i18n="order.clear">Limpar pedido</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </div><!-- /tabs-container -->
+
+    <script src="static/js/i18n.js"></script>
+    <script src="static/js/main.js"></script>
+
+    <script>
+    /* ===== Versão estática: carrinho via localStorage ===== */
+
+    let catalogoDrinks = [];
+    let catalogoPetiscos = [];
+
+    function getCarrinho() {
+      return JSON.parse(localStorage.getItem('bombs_cart') || '[]');
+    }
+    function salvarCarrinho(c) {
+      localStorage.setItem('bombs_cart', JSON.stringify(c));
+    }
+    function totalCarrinho() {
+      return getCarrinho().reduce((s, i) => s + i.quantidade, 0);
+    }
+    function precoItem(nome) {
+      const d = catalogoDrinks.find(x => x.nome === nome);
+      if (d) return d.preco;
+      for (const cat of catalogoPetiscos) {
+        const p = cat.itens.find(x => x.nome === nome);
+        if (p) return p.preco;
+      }
+      return 0;
+    }
+
+    async function adicionarAoCarrinho(nome, quantidade = 1) {
+      const carrinho = getCarrinho();
+      const item = carrinho.find(i => i.nome === nome);
+      if (item) item.quantidade += quantidade;
+      else carrinho.push({ nome, quantidade });
+      salvarCarrinho(carrinho);
+      atualizarBadge(totalCarrinho());
+      mostrarToast('🍸 ' + nome + ' ' + (window.t ? t('toast.added') : 'adicionado ao pedido!'));
+    }
+
+    function renderizarPedido() {
+      const carrinho = getCarrinho();
+      const lista = document.getElementById('pedido-lista');
+      const vazio = document.getElementById('pedido-vazio');
+      const conteudo = document.getElementById('pedido-conteudo');
+      if (!lista) return;
+
+      if (carrinho.length === 0) {
+        vazio.style.display = 'block';
+        conteudo.style.display = 'none';
+        return;
+      }
+      vazio.style.display = 'none';
+      conteudo.style.display = 'block';
+
+      lista.innerHTML = '';
+      let total = 0;
+      carrinho.forEach(item => {
+        const preco = precoItem(item.nome);
+        const sub = preco * item.quantidade;
+        total += sub;
+        const linha = document.createElement('div');
+        linha.className = 'pedido-item';
+        linha.dataset.nome = item.nome;
+        linha.dataset.preco = preco;
+        linha.innerHTML = `
+          <div class="pedido-item__img" style="background:linear-gradient(135deg,#0a2410,#1a4a22);display:flex;align-items:center;justify-content:center;color:rgba(60,195,60,0.4);font-size:1.6rem;">
+            <i class="fa-solid fa-martini-glass-citrus"></i>
+          </div>
+          <div class="pedido-item__info">
+            <div class="pedido-item__nome">${item.nome}</div>
+            <div class="pedido-item__preco-unit">€ ${preco.toFixed(2)} / unid.</div>
+          </div>
+          <div class="pedido-item__controles">
+            <button class="qty-btn qty-btn-menos">−</button>
+            <span class="qty-display">${item.quantidade}</span>
+            <button class="qty-btn qty-btn-mais">+</button>
+          </div>
+          <div class="pedido-item__subtotal">€ ${sub.toFixed(2)}</div>
+          <button class="pedido-item__remover"><i class="fa-solid fa-trash"></i></button>
+        `;
+        linha.querySelector('.qty-btn-menos').addEventListener('click', () => {
+          alterarQtd(item.nome, -1, linha);
+        });
+        linha.querySelector('.qty-btn-mais').addEventListener('click', () => {
+          alterarQtd(item.nome, 1, linha);
+        });
+        linha.querySelector('.pedido-item__remover').addEventListener('click', () => {
+          removerItem(item.nome);
+        });
+        lista.appendChild(linha);
+      });
+      document.getElementById('total-valor').textContent = '€ ' + total.toFixed(2);
+    }
+
+    function alterarQtd(nome, delta, linha) {
+      const carrinho = getCarrinho();
+      const item = carrinho.find(i => i.nome === nome);
+      if (!item) return;
+      item.quantidade += delta;
+      if (item.quantidade <= 0) {
+        salvarCarrinho(carrinho.filter(i => i.nome !== nome));
+      } else {
+        salvarCarrinho(carrinho);
+      }
+      atualizarBadge(totalCarrinho());
+      renderizarPedido();
+    }
+
+    function removerItem(nome) {
+      salvarCarrinho(getCarrinho().filter(i => i.nome !== nome));
+      atualizarBadge(totalCarrinho());
+      renderizarPedido();
+    }
+
+    /* ===== Carregar drinks do JSON ===== */
+    async function carregarDrinks() {
+      try {
+        const resp = await fetch('data/drinks.json');
+        catalogoDrinks = await resp.json();
+        const grid = document.getElementById('drinks-grid');
+        if (!grid) return;
+        grid.innerHTML = catalogoDrinks.map(drink => `
+          <div class="drink-card">
+            <div class="drink-card__img-wrap">
+              <img class="drink-card__img" src="static/${drink.imagem}" alt="${drink.nome}" loading="lazy"
+                onerror="this.parentElement.innerHTML='<div class=\\'drink-card__placeholder\\'><i class=\\'fa-solid fa-martini-glass-citrus\\'></i></div>'" />
+            </div>
+            <div class="drink-card__body">
+              <h3 class="drink-card__nome">${drink.nome}</h3>
+              <p class="drink-card__desc">${drink.descricao_curta}</p>
+              <p class="drink-card__preco">€ ${drink.preco.toFixed(2)}</p>
+              <div class="drink-card__actions">
+                <button class="btn btn-primary" onclick="adicionarAoCarrinho('${drink.nome.replace(/'/g, "\\'")}')">
+                  <i class="fa-solid fa-plus"></i> <span data-i18n="btn.order">Pedido</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      } catch(e) { console.warn('Erro ao carregar drinks:', e); }
+    }
+
+    /* ===== Carregar petiscos do JSON ===== */
+    async function carregarPetiscos() {
+      try {
+        const resp = await fetch('data/petiscos.json');
+        catalogoPetiscos = await resp.json();
+        const container = document.getElementById('petiscos-container');
+        if (!container) return;
+        container.innerHTML = catalogoPetiscos.map(cat => `
+          <div class="petisco-categoria">
+            <div class="petisco-cat-header">
+              <i class="fa-solid ${cat.icone}" style="color:${cat.cor}"></i>
+              <h3 class="petisco-cat-titulo">${cat.categoria}</h3>
+            </div>
+            <div class="petiscos-grid">
+              ${cat.itens.map(item => `
+                <div class="petisco-card">
+                  <div class="petisco-card__img-wrap">
+                    ${item.imagem
+                      ? `<img class="petisco-card__img" src="static/images/petiscos/${item.imagem}" alt="${item.nome}" loading="lazy" />`
+                      : `<div class="petisco-card__placeholder-food"><i class="fa-solid fa-utensils"></i></div>`
+                    }
+                  </div>
+                  <div class="petisco-card__body">
+                    <div class="petisco-card__top">
+                      <span class="petisco-card__nome">${item.nome}</span>
+                      ${item.vegano ? '<span class="badge-vegano"><i class="fa-solid fa-seedling"></i></span>' : ''}
+                    </div>
+                    <p class="petisco-card__desc">${item.descricao}</p>
+                    <div class="petisco-card__bottom">
+                      <span class="petisco-card__preco">€ ${item.preco.toFixed(2)}</span>
+                      <button class="btn btn-primary btn-sm" onclick="adicionarAoCarrinho('${item.nome.replace(/'/g, "\\'")}')">
+                        <i class="fa-solid fa-plus"></i> <span data-i18n="btn.order">Pedido</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `).join('');
+      } catch(e) { console.warn('Erro ao carregar petiscos:', e); }
+    }
+
+    /* ===== Inicialização ===== */
+    document.addEventListener('DOMContentLoaded', () => {
+      atualizarBadge(totalCarrinho());
+      carregarDrinks();
+      carregarPetiscos();
+
+      // Renderiza pedido ao abrir a aba
+      document.querySelectorAll('[data-tab="pedido"]').forEach(btn => {
+        btn.addEventListener('click', () => setTimeout(renderizarPedido, 50));
+      });
+
+      // Limpar pedido
+      const btnLimpar = document.getElementById('btn-limpar');
+      if (btnLimpar) {
+        btnLimpar.addEventListener('click', () => {
+          if (!confirm(window.t ? t('order.clear_confirm') : 'Limpar o pedido inteiro?')) return;
+          salvarCarrinho([]);
+          atualizarBadge(0);
+          renderizarPedido();
+        });
+      }
+    });
+    </script>
+  </body>
+</html>
